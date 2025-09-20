@@ -86,3 +86,8 @@ Includes trend-level data across YouTube Shorts & TikTok:
 - Explore cross-platform **recommendation patterns**.  
 - Create interactive dashboards (Streamlit / HuggingFace Spaces) for deeper exploration.  
 
+---
+
+## Related Repositories
+- 🔍 [Shorts & TikTok Trends EDA](https://github.com/tarekmasryo/shorts-tiktok-trends-eda)
+
