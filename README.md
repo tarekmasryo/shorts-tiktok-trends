@@ -89,6 +89,6 @@ Includes trend-level data across YouTube Shorts & TikTok:
 ---
 
 ## Related Repositories
-- 📂 [Shorts & TikTok Trends EDA](https://github.com/tarekmasryo/shorts-tiktok-trends-eda)
+- 📂 [Shorts & TikTok Trends EDA](https://github.com/tarekmasryo/shorts-tiktok-trends-dataset)
 
 
