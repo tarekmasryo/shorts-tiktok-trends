@@ -20,6 +20,42 @@ Includes trend-level data across YouTube Shorts & TikTok:
 
 ---
 
+## 📁 Repo layout
+
+```text
+.
+├── youtube-shorts-tiktok-2025-eda-insights.ipynb
+├── data/
+│   └── raw/               # put youtube_shorts_tiktok_trends_2025.csv here (local runs)
+├── artifacts/             # optional saved tables/figures
+├── repo_utils/
+│   └── pathing.py         # local + Kaggle path helpers
+├── CASE_STUDY.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+## 🚀 Run locally
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+- Put `youtube_shorts_tiktok_trends_2025.csv` under `data/raw/`
+- Open the notebook and run top‑to‑bottom
+
+> The notebook uses `repo_utils/pathing.py` to support **local** `data/raw/` and **Kaggle** `/kaggle/input/` without editing paths.
+
+---
+
+## 🧾 Case Study
+See **CASE_STUDY.md** for the project story, decisions, and takeaways.
+
 ## 🔧 Methodology (Step-by-Step)  
 
 **1. Data Cleaning & Prep**  
