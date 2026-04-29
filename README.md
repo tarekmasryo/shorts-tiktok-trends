@@ -45,6 +45,7 @@ Core groups covered:
 
 > The raw CSV is not committed to this repository. For local runs, place it under `data/raw/`.
 
+> Download the dataset from the Kaggle dataset page, then place the CSV under `data/raw/` for local runs.
 ---
 
 ## 🧭 Notebook structure
