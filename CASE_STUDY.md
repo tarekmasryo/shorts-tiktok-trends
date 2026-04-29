@@ -48,9 +48,9 @@ The workflow focuses on clear, reusable exploratory analysis:
 - Device, upload-hour, category, language, season, traffic-source, and content-style fields support practical segmentation.
 - Monthly activity and views make the dataset suitable for trend-monitoring dashboard work.
 
-## Production and portfolio value
+## How this can be extended
 
-This notebook is best positioned as a polished EDA and analytics workflow. It can be extended into:
+This notebook is an EDA workflow that can be extended into:
 
 - a Streamlit dashboard,
 - a content trend monitoring report,

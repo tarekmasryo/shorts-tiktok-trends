@@ -10,7 +10,7 @@ A practical exploratory analysis of short-form video trends across platforms, co
 
 ## 📌 What’s inside
 
-- 📓 A polished EDA notebook:
+- 📓 Main EDA notebook:
   - `short-video-youtube-tiktok-trends-eda.ipynb`
 - 📊 Analysis across:
   - platforms
@@ -30,7 +30,7 @@ A practical exploratory analysis of short-form video trends across platforms, co
 
 **Main file:** `youtube_shorts_tiktok_trends_2025.csv`
 
-The dataset is structured for short-video analytics and includes platform-style performance metrics plus creator, content, timing, device, traffic-source, and engagement fields.
+The dataset includes short-video performance metrics along with creator, content, timing, device, traffic-source, and engagement fields.
 
 Core groups covered:
 
