@@ -1,130 +1,175 @@
-# 🎬 YouTube Shorts & TikTok Trends 2025 — EDA Tutorial  
+# 🎬 Short Video Trends 2025 — YouTube Shorts & TikTok EDA
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](#)
+[![Notebook](https://img.shields.io/badge/Format-Jupyter%20Notebook-orange)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A practical exploratory analysis of short-form video trends across platforms, countries, creators, hashtags, devices, traffic sources, and time.
 
 ---
 
-## 📌 Project Overview  
-This project explores **short-form video trends** on **YouTube Shorts** and **TikTok** during **2025**.  
+## 📌 What’s inside
 
-The notebook is designed as a **beginner-friendly tutorial** for Exploratory Data Analysis (EDA). It walks through how to load, clean, and explore the dataset while building visual insights into creators, hashtags, platforms, and audience behaviors.  
+- 📓 A polished EDA notebook:
+  - `short-video-youtube-tiktok-trends-eda.ipynb`
+- 📊 Analysis across:
+  - platforms
+  - countries
+  - creators
+  - hashtags
+  - devices
+  - traffic sources
+  - posting time and monthly trends
+- 📈 Practical visualizations for heavy-tailed engagement and view metrics.
+- 🧭 Portable data loading for Kaggle and local runs.
+- 🧱 Lightweight repo layout with `data/raw/`, `artifacts/`, and helper utilities.
 
 ---
 
-## 📊 Dataset  
-**File:** `youtube_shorts_tiktok_trends_2025.csv`  
+## 📂 Dataset
 
-Includes trend-level data across YouTube Shorts & TikTok:  
-- 📹 Video metadata: title, category, language, duration, upload hour.  
-- 📈 Performance: views, likes, comments, shares, saves, dislikes.  
-- 🔄 Engagement metrics: engagement rate, like/share/save ratios, velocity, completion.  
-- 🌍 Context: country, platform, device type, device brand, event season, hashtags, creator/channel.  
+**Main file:** `youtube_shorts_tiktok_trends_2025.csv`
+
+The dataset is structured for short-video analytics and includes platform-style performance metrics plus creator, content, timing, device, traffic-source, and engagement fields.
+
+Core groups covered:
+
+| Group | Examples |
+|---|---|
+| Performance metrics | `views`, `likes`, `comments`, `shares`, `saves`, `dislikes` |
+| Engagement metrics | `engagement_rate`, ratios, velocity-style signals |
+| Platform and geography | `platform`, `country` |
+| Creator and content | creator/channel fields, hashtags, category, language |
+| Timing | publish date, upload hour, monthly trend fields |
+| Context | device type, device brand, traffic source, season, content style |
+
+> The raw CSV is not committed to this repository. For local runs, place it under `data/raw/`.
 
 ---
 
-## 📁 Repo layout
+## 🧭 Notebook structure
 
-```text
-.
-├── youtube-shorts-tiktok-2025-eda-insights.ipynb
-├── data/
-│   └── raw/               # put youtube_shorts_tiktok_trends_2025.csv here (local runs)
-├── artifacts/             # optional saved tables/figures
-├── repo_utils/
-│   └── pathing.py         # local + Kaggle path helpers
-├── CASE_STUDY.md
-├── requirements.txt
-└── .gitignore
-```
+The notebook follows a clear EDA flow:
+
+1. **Setup & imports**
+2. **Data loading**
+3. **Basic information and data health checks**
+4. **Feature engineering**
+5. **Platform, country, creator, hashtag, and timing analysis**
+6. **Creator concentration analysis**
+7. **Segmentation views by device, category, language, traffic source, and content style**
+8. **Key takeaways and next-step recommendations**
 
 ---
 
 ## 🚀 Run locally
 
+Create an environment and install the dependencies:
+
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
+```
+
+Activate it:
+
+```bash
+# Windows
+.venv\Scripts\activate
+```
+
+```bash
+# macOS/Linux
+source .venv/bin/activate
+```
+
+Install requirements:
+
+```bash
 pip install -r requirements.txt
 ```
 
-- Put `youtube_shorts_tiktok_trends_2025.csv` under `data/raw/`
-- Open the notebook and run top‑to‑bottom
+Then place the dataset here:
 
-> The notebook uses `repo_utils/pathing.py` to support **local** `data/raw/` and **Kaggle** `/kaggle/input/` without editing paths.
+```text
+data/raw/youtube_shorts_tiktok_trends_2025.csv
+```
 
----
-
-## 🧾 Case Study
-See **CASE_STUDY.md** for the project story, decisions, and takeaways.
-
-## 🔧 Methodology (Step-by-Step)  
-
-**1. Data Cleaning & Prep**  
-- Inspect dataset size (rows × columns), dtypes, missing values, duplicates.  
-- Standardize schema and convert numeric types.  
-- Derive engagement metrics (total engagement, rates, per-1k metrics).  
-- Create time buckets (monthly aggregates).  
-
-**2. Exploratory Analysis**  
-- Correlation heatmaps of engagement metrics.  
-- Distribution plots (views, duration, engagement rates).  
-- Coverage matrix: **Country × Platform**.  
-- Monthly views: trends, percentage change, cumulative curves.  
-- Leaderboards: top creators, top hashtags, Pareto (80/20 rule).  
-
-**3. Visualization & Storytelling**  
-- Bar, line, pie, violin, and scatter plots.  
-- Highlight differences across platforms, countries, devices, and content styles.  
-- Show heavy-tailed distributions with log scaling for clarity.  
-
-**4. Insight Extraction**  
-- Which platforms dominate views in 2025.  
-- Engagement patterns (likes, shares, saves, comments).  
-- How few creators drive the majority of views (Pareto effect).  
-- Differences by country, device type, posting hour, category, and language.  
-- Distinction between short-lived vs. sustained viral trends.  
+Open the notebook and run it top to bottom.
 
 ---
 
-## 🧠 Features Examined  
-- **Core metrics:** views, likes, comments, shares, saves, dislikes.  
-- **Engagement ratios:** engagement rate, like/share/save rates, engagement per 1k views.  
-- **Temporal features:** publish date, year-month, trend duration, engagement velocity.  
-- **Contextual features:** country, platform, device type, device brand, category, language, event season.  
-- **Content style:** title length, emoji presence.  
+## 🧪 Run on Kaggle
+
+1. Open the notebook on Kaggle.
+2. Add the dataset from the Kaggle sidebar.
+3. Run:
+
+```text
+Restart Session
+Run All
+Save Version
+```
+
+The notebook searches for the CSV inside `/kaggle/input` automatically, so it does not depend on a hard-coded Kaggle folder name.
 
 ---
 
-## 📈 Results & Insights (Examples)  
-- **Heavy-tailed distributions:** Most views are concentrated in a small set of viral videos.  
-- **Pareto principle:** ~20% of creators drive ~80% of total views.  
-- **Platform dynamics:** Engagement rates differ noticeably between YouTube Shorts and TikTok.  
-- **Country & platform coverage:** Adoption is uneven across regions, some countries skew heavily to one platform.  
-- **Behavioral patterns:** Posting hour, device type, and content category affect visibility and engagement.  
-- **Trend life cycle:** Some topics spike fast but fade quickly, others show slower, sustained momentum.  
+## 📊 Key analysis areas
+
+- 🌍 Country and platform coverage
+- 📱 Device and traffic-source breakdowns
+- 🏷️ Hashtag and creator views
+- ⏱️ Upload-hour and monthly trend behavior
+- 📈 Heavy-tailed view and engagement distributions
+- 🧮 Creator concentration in total views
+- 🧩 Segmentation angles for dashboard and modeling follow-up
 
 ---
 
-## 🗺️ Visual Gallery  
-- 📊 Dataset size overview (rows × columns, top countries).  
-- 🔥 Monthly views & growth trends.  
-- 🎭 Engagement rate distributions (boxplots & violin).  
-- 🌍 Country × Platform heatmaps.  
-- 🏆 Top creators and hashtags leaderboards.  
-- 📈 Pareto curve (creators vs. views).  
-- 📱 Device & traffic source breakdowns.  
-- ✍️ Title length & emoji impact on engagement.  
+## ✅ Key takeaways
+
+- The dataset provides a broad short-video analytics view across platforms, countries, creators, hashtags, devices, traffic sources, and timing dimensions.
+- Core schema and data health checks confirm that the main analytical fields are available and suitable for exploratory analysis.
+- Engagement and view metrics are heavy-tailed, so log-scaled views and clipped distributions improve readability and interpretation.
+- Creator-level views are distributed across a broader creator base rather than following an extreme 80/20 concentration pattern.
+- Platform activity and views evolve monthly, making the dataset suitable for trend-monitoring dashboards.
+- Device, upload-hour, category, language, season, traffic-source, and content-style fields provide practical segmentation angles.
 
 ---
 
-## 💡 Next Steps  
-- Build a simple model to predict **high-engagement trends**.  
-- Add more years of data to track multi-year dynamics.  
-- Explore cross-platform **recommendation patterns**.  
-- Create interactive dashboards (Streamlit / HuggingFace Spaces) for deeper exploration.  
+## 🗂️ Repository layout
+
+```text
+.
+├── short-video-youtube-tiktok-trends-eda.ipynb
+├── data/
+│   └── raw/
+│       └── .gitkeep
+├── artifacts/
+│   └── .gitkeep
+├── repo_utils/
+│   ├── __init__.py
+│   └── pathing.py
+├── CASE_STUDY.md
+├── CHANGELOG.md
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
 ---
 
-## Related Repositories
-- 📂 [Shorts & TikTok Trends EDA](https://github.com/tarekmasryo/shorts-tiktok-trends-dataset)
+## 🧠 Follow-up ideas
 
+- Build an interactive Streamlit dashboard with filters for platform, country, category, creator tier, and time period.
+- Add a baseline model for high-engagement trend classification.
+- Create reusable reporting views for creator, country, and platform comparisons.
+- Export selected tables and figures into `artifacts/` for downstream dashboards or presentations.
 
+---
+
+## 📄 License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+Copyright © Tarek Masryo.
